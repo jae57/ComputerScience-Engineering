@@ -67,7 +67,7 @@ compress되었을 때는 compress된 fragment의 길이가 되고, compress안�
 ![SSL Record Protocol Payload](../figures/sslProtocolPayload.jpg)
 
 SSL-Specific Protocols (이전 그림의 SSL Record Protocol 상위 계층에 있는)
-![SSL Specific Protocol](../figures/sslSpecificProtocol.png)
+![SSL Specific Protocol](../figures/sslSpecificProtocol.PNG)
 (a) Change Cipher Spec Protocol
 - One of 3 SSL specific protocols which use the SSL Record Protocol
   (바로 아래 layer가 SSL Record Protocol이니까)
@@ -111,20 +111,20 @@ Client와 Server사이의 logical connection을 설정하기 위해 요구되는
 1. Establish Security Capabilities
   어떤 알고리즘을 쓸 것인가 협상하는 부분(서로간에 연결을 설정하는 부분)
   둘 사이에 실제로 통신을 하기위한 기본적인 조건들을 상호간에 협상하는 부분.
-  ![Handshake Protocol Action](../figures/handshakePhase1.png)
+  ![Handshake Protocol Action](../figures/handshakePhase1.PNG)
 2. Server Authentication and Key Exchange
   서버인증과 관련된 key 교환. 서버 인증하는 부분
   서버가 자기 인증서 보내고, 서버 key에 대한 정보도 보내고,
   client에게 필요한 인증서를 요구(=client,너도 인증서 줘)
   서버가 자기를 인증하기 위해서는 자신에 대한 public key를 줘야함.
   그래야 상대방이 그 key(server의 public key)를 가지고 server가 보내온 인증서(server의 private key로 암호화해서 보냄.)를 풀어서 확인할 수 있으니까
-  ![Handshake Protocol Action](../figures/handshakePhase2.png)
+  ![Handshake Protocol Action](../figures/handshakePhase2.PNG)
 3. Client Authentication and Key Exchange
   클라이언트도 마찬가지
-  ![Handshake Protocol Action](../figures/handshakePhase3.png)
+  ![Handshake Protocol Action](../figures/handshakePhase3.PNG)
 4. Finish
   둘 사이가 전체적으로 완성됨 = 인증과 암호화를 위한 알고리즘과 key가 상호간에 가지고 있으면서 통신을 시작할 수 있는 조건이, logical connection이 설정이 되어지고 그를 통해서 보안이 제공되는 통신을 할 수 있는 기반이 마련된다.
-  ![Handshake Protocol Action](../figures/handshakePhase4.png)
+  ![Handshake Protocol Action](../figures/handshakePhase4.PNG)
 
 이런 것들이 Handshake protocol을 통해서 client와 server가 통신하기 전에 먼저 secure한 logical connection을 설정하고! 그 다음에 통신이 이루어진다.
 
